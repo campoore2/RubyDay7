@@ -1,7 +1,7 @@
 require('capybara/rspec')
 require('./app')
 Capybara.app = Sinatra::Application
-set(:show_expections, false)
+set(:show_exceptions, false)
 
 
 describe('tasks path', {:type => :feature}) do

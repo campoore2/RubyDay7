@@ -1,0 +1,17 @@
+<form action="/tamagotchi/new" method="post">
+  <div class="form-group">
+     <label for="name">Enter a name for your pet</label>
+     <input id="name" name="name" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn-lg btn btn-primary">New</button>
+</form>
+
+<div class="result">
+  <ul>
+  <% if @pets %>
+    <% @pets.each_with_index do | pet, index | %>
+      <li><a href="/tamagotchi/view/<%= index %>"><%= pet.name %></a></li>
+    <% end %>
+  <% end %>
+  <ul>
+</div>

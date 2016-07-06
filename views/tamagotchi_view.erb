@@ -1,0 +1,23 @@
+<% if @pet.is_alive? %>
+  <h1><%= @pet.name %></h1>
+  <h2>Age: <%= @pet.age %></h2>
+  <div id="pet_id"><%= @index %></div>
+  <ul>
+    <li>
+      <button type="button" id="food" class="btn-md btn btn-primary">
+          <span class="glyphicon glyphicon-plus"></span>
+      </button> Food: <%= @pet.food_level %>
+    </li>
+    <li>
+      <button type="button" id="activity" class="btn-md btn btn-primary">
+        <span class="glyphicon glyphicon-plus"></span>
+      </button> Activity: <%= @pet.activity_level %>
+    </li>
+    <li>
+      <button type="button" id="sleep" class="btn-md btn btn-primary">
+        <span class="glyphicon glyphicon-plus"></span>
+      </button> Sleep: <%= @pet.sleep_level %>
+    </li>
+  </ul>
+<% else %><%= @pet.name %> has died
+<% end %>
