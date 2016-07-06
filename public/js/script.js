@@ -4,6 +4,6 @@ $(function(){
   $("#" + page_title).addClass("active");
 
   $("#clear").click(function(e){
-    $(location).attr('href', '/tasks/clear')
+    $(location).attr('href', '/'+page_title+'/clear')
   });
 });
